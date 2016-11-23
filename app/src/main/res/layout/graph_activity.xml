@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main" >
+
+    <LinearLayout
+        android:id="@+id/linearLayoutHeadder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <include layout="@layout/header_help" />
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/btnDatePicker"
+        android:layout_margin="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayoutHeadder"
+        android:text="12-12-12"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/round_bg_blue_xml"
+        android:layout_centerHorizontal="true"
+        />
+    
+    <TextView 
+         android:id="@+id/tvTitleForGraph"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnDatePicker"
+        android:text="Daily"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        
+        />
+    
+    <LinearLayout 
+        android:id="@+id/layoutForGraph"
+        android:layout_margin="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/tvTitleForGraph"
+        android:orientation="horizontal"
+        ></LinearLayout>
+    
+    
+
+
+</RelativeLayout>
