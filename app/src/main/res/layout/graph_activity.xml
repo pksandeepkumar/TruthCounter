@@ -4,14 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/bg_main" >
 
-    <LinearLayout
-        android:id="@+id/linearLayoutHeadder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true" >
 
-        <include layout="@layout/header_help" />
-    </LinearLayout>
     
     <Button
         android:id="@+id/btnDatePicker"
@@ -20,7 +13,6 @@
         android:paddingRight="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayoutHeadder"
         android:text="12-12-12"
         android:textColor="#FFFFFF"
         android:background="@drawable/round_bg_blue_xml"

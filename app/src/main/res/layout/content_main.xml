@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main" >
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/yourScoreBoard"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_margin="5dp" >
+
+        <Button
+            android:id="@+id/btnBad"
+            style="@style/style_for_good_bad_button"
+            android:background="@drawable/ic_bad_xml"
+            android:onClick="addBad" />
+
+        <Button
+            android:id="@+id/btnGood"
+            style="@style/style_for_good_bad_button"
+            android:background="@drawable/ic_good_xml"
+            android:onClick="addGood" />
+    </LinearLayout>
+
+    <texus.truthcounter.components.ItemScoreBoard
+        android:id="@+id/yourScoreBoard"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/navigationLayout"
+        android:layout_margin="5dp" >
+    </texus.truthcounter.components.ItemScoreBoard>
+
+    <LinearLayout
+        android:id="@+id/navigationLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/yourStatus"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/style_for_navigation_button"
+            android:onClick="openDescriptionPage"
+            android:text="About App" />
+
+        <TextView
+            style="@style/style_for_navigation_button"
+            android:onClick="openMyBookActivity"
+            android:text="My Book" />
+
+        <TextView
+            android:visibility="invisible"
+            style="@style/style_for_navigation_button"
+            android:onClick="openSettingsActivity"
+            android:text="Settings" />
+
+    </LinearLayout>
+
+    <texus.truthcounter.components.ItemYourStatus
+        android:id="@+id/yourStatus"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp" >
+    </texus.truthcounter.components.ItemYourStatus>
+
+</RelativeLayout>

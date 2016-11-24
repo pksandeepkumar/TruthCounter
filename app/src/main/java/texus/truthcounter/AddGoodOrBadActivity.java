@@ -20,6 +20,8 @@ public class AddGoodOrBadActivity extends BaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.add_activity);
+
+		setBackOnToolbar();
 		
 		Button btenGoodOrBad = ( Button ) this.findViewById(R.id.btnGoodOrBad);
 		etDescription = (EditText) this.findViewById(R.id.etDescription);
@@ -34,6 +36,8 @@ public class AddGoodOrBadActivity extends BaseActivity {
 		
 		
 	}
+
+
 	
 	public void addGoodOrBad( View view) {
 		if(value == GOOD)  {

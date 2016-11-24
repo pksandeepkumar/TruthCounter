@@ -4,14 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/bg_main" >
 
-    <LinearLayout
-        android:id="@+id/linearLayoutHeadder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true" >
 
-        <include layout="@layout/header_help" />
-    </LinearLayout>
     
     <ListView 
         android:layout_below="@+id/linearLayoutHeadder"
