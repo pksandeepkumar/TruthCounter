@@ -15,6 +15,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".DescriptionActivity"/>
+        <activity android:name=".SettingsActivity"/>
+        <activity android:name=".PieGraphActivity"/>
+        <activity android:name=".AddGoodOrBadActivity"/>
+        <activity android:name=".MyBookActivity"/>
+
     </application>
 
 </manifest>

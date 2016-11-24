@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TruthCounter</string>
+
+    <string name="about">Aboout App</string>
+    <string name="my_book">My Book</string>
+
+
 </resources>

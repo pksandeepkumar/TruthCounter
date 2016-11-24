@@ -8,4 +8,13 @@
 
     <dimen name="main_margins">5dp</dimen>
 
+    <dimen name="menu_button_size">40dp</dimen>
+
+    <dimen name="pie_chart_control_size">45dp</dimen>
+
+
+    <dimen name="card_elevation">20dp</dimen>
+    <dimen name="card_corner_radious">2dp</dimen>
+
+
 </resources>

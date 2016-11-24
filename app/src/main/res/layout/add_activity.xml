@@ -4,18 +4,11 @@
     android:layout_height="match_parent"
     android:background="@color/bg_main" >
 
-    <LinearLayout
-        android:id="@+id/linearLayoutHeadder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true">
-        <include layout="@layout/header_help" />
-    </LinearLayout>
+
 
     <Button
         android:id="@+id/btnGoodOrBad"
         style="@style/style_for_good_bad_button"
-        android:layout_below="@+id/linearLayoutHeadder"
         android:layout_centerHorizontal="true"
         android:background="@drawable/ic_bad_xml"
          />

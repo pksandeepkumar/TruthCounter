@@ -1,18 +1,26 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/bg_main" >
+    android:layout_gravity="center"
+
+    cardElevation="@dimen/card_elevation"
+    card_view:cardCornerRadius="2dp">
+
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:orientation="horizontal">
 
             <TextView
                 style="@style/style_for_score_board_headder_left"
@@ -20,20 +28,23 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Duration" />
+
             <TextView
                 style="@style/style_for_score_board_headder_other"
                 android:layout_width="1px"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/bg_red_for_score_board"
                 android:text="Bad" />
+
             <TextView
                 style="@style/style_for_score_board_headder_other"
                 android:layout_width="1px"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/bg_green_for_score_board"
                 android:text="Good" />
+
             <TextView
                 style="@style/style_for_score_board_headder_other"
                 android:layout_width="1px"
@@ -41,218 +52,259 @@
                 android:layout_weight="1"
                 android:text="Chart" />
         </LinearLayout>
-        
+
         <!-- Daily -->
 
         <LinearLayout
             style="@style/style_for_score_board_line_layout"
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-             />
-  
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
         <LinearLayout
             style="@style/style_for_score_board_internal_layout"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
+
             <TextView
                 style="@style/style_for_score_board_text_left"
                 android:layout_width="1px"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Daily" />
+
             <TextView
                 android:id="@+id/badDaily"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/bg_red_for_score_board"
                 android:text="" />
+
             <TextView
                 android:id="@+id/goodDaily"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/bg_green_for_score_board"
                 android:text="" />
+
             <LinearLayout
                 style="@style/style_for_score_board_layout_graph_image"
                 android:layout_width="1px"
                 android:layout_height="wrap_content"
-                android:layout_weight="1">  
-               <ImageView
-                   	android:id="@+id/imDaily" 
-                   	style="@style/style_for_score_board_graph_image"
-                   	/>   
-             </LinearLayout>
+                android:layout_weight="1">
+
+                <texus.truthcounter.components.ControlPieGraph
+                    android:id="@+id/pieChartDaily"
+                    style="@style/style_pie_chart_home_page"
+                    />
+
+
+            </LinearLayout>
         </LinearLayout>
-        
+
         <!-- Weekly -->
-        <LinearLayout style="@style/style_for_score_board_line_layout" />  
+        <LinearLayout style="@style/style_for_score_board_line_layout" />
+
         <LinearLayout
             style="@style/style_for_score_board_internal_layout"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
+
             <TextView
                 style="@style/style_for_score_board_text_left"
                 android:layout_width="1px"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Weekly" />
+
             <TextView
                 android:id="@+id/badWeekly"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/bg_red_for_score_board"
                 android:text="" />
+
             <TextView
                 android:id="@+id/goodWeekly"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/bg_green_for_score_board"
                 android:text="" />
+
             <LinearLayout
                 style="@style/style_for_score_board_layout_graph_image"
                 android:layout_width="1px"
                 android:layout_height="wrap_content"
-                android:layout_weight="1">  
-               <ImageView 
-                   android:id="@+id/imWeekly" 
-                   	style="@style/style_for_score_board_graph_image"/>   
-             </LinearLayout>
+                android:layout_weight="1">
+
+                <texus.truthcounter.components.ControlPieGraph
+                    android:id="@+id/pieWeekly"
+                    style="@style/style_pie_chart_home_page"
+                    />
+
+
+            </LinearLayout>
         </LinearLayout>
-        
+
         <!-- Monthly -->
-        <LinearLayout style="@style/style_for_score_board_line_layout" />  
+        <LinearLayout style="@style/style_for_score_board_line_layout" />
+
         <LinearLayout
             style="@style/style_for_score_board_internal_layout"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
+
             <TextView
                 style="@style/style_for_score_board_text_left"
                 android:layout_width="1px"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Monthly" />
+
             <TextView
                 android:id="@+id/badMonthly"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/bg_red_for_score_board"
                 android:text="" />
+
             <TextView
                 android:id="@+id/goodMonthly"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/bg_green_for_score_board"
                 android:text="" />
+
             <LinearLayout
                 style="@style/style_for_score_board_layout_graph_image"
                 android:layout_width="1px"
                 android:layout_height="wrap_content"
-                android:layout_weight="1">  
-               <ImageView 
-                   android:id="@+id/imMonthly" 
-                   	style="@style/style_for_score_board_graph_image"/>   
-             </LinearLayout>
+                android:layout_weight="1">
+
+                <texus.truthcounter.components.ControlPieGraph
+                    android:id="@+id/pieChartMonthly"
+                    style="@style/style_pie_chart_home_page"
+                    />
+
+
+            </LinearLayout>
         </LinearLayout>
-        
+
         <!-- Yearly -->
-        <LinearLayout style="@style/style_for_score_board_line_layout" />  
+        <LinearLayout style="@style/style_for_score_board_line_layout" />
+
         <LinearLayout
             style="@style/style_for_score_board_internal_layout"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
+
             <TextView
                 style="@style/style_for_score_board_text_left"
                 android:layout_width="1px"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yearly" />
+
             <TextView
                 android:id="@+id/badYearly"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/bg_red_for_score_board"
                 android:text="" />
+
             <TextView
                 android:id="@+id/goodYearly"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/bg_green_for_score_board"
                 android:text="" />
+
             <LinearLayout
                 style="@style/style_for_score_board_layout_graph_image"
                 android:layout_width="1px"
                 android:layout_height="wrap_content"
-                android:layout_weight="1">  
-               <ImageView 
-                   android:id="@+id/imYearly" 
-                   	style="@style/style_for_score_board_graph_image"/>   
-             </LinearLayout>
+                android:layout_weight="1">
+
+                <texus.truthcounter.components.ControlPieGraph
+                    android:id="@+id/pieChartYearly"
+                    style="@style/style_pie_chart_home_page"
+                    />
+
+
+            </LinearLayout>
         </LinearLayout>
-        
+
         <!-- Total -->
-        <LinearLayout style="@style/style_for_score_board_line_layout" />  
+        <LinearLayout style="@style/style_for_score_board_line_layout" />
+
         <LinearLayout
             style="@style/style_for_score_board_internal_layout"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
+
             <TextView
                 style="@style/style_for_score_board_text_left"
                 android:layout_width="1px"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Total" />
+
             <TextView
                 android:id="@+id/badTotal"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/bg_red_for_score_board"
                 android:text="" />
+
             <TextView
                 android:id="@+id/goodTotal"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/bg_green_for_score_board"
                 android:text="" />
+
             <LinearLayout
                 style="@style/style_for_score_board_layout_graph_image"
                 android:layout_width="1px"
                 android:layout_height="wrap_content"
-                android:layout_weight="1">  
-               <ImageView 
-                   android:id="@+id/imTotal" 
-                   	style="@style/style_for_score_board_graph_image"/>   
-             </LinearLayout>
+                android:layout_weight="1">
+
+                <texus.truthcounter.components.ControlPieGraph
+                    android:id="@+id/pieChartTotal"
+                    style="@style/style_pie_chart_home_page"
+                    />
+
+
+            </LinearLayout>
         </LinearLayout>
-        <LinearLayout style="@style/style_for_score_board_line_layout" />  
-        
-        
+
+
+
     </LinearLayout>
 
-   
 
-</RelativeLayout>
+</android.support.v7.widget.CardView>

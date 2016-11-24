@@ -39,6 +39,8 @@ public class PieGraphActivity extends BaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.graph_activity);
+
+		setBackOnToolbar();
 		btnChangeDate = (Button) this.findViewById(R.id.btnDatePicker);
 		tvTitleForGraph  = (TextView) this.findViewById(R.id.tvTitleForGraph);
 		

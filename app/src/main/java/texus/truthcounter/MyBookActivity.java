@@ -1,14 +1,9 @@
-package com.texus.truthcounter;
+package texus.truthcounter;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-import com.texus.truthcounter.adapter.TruthListAdapeter;
-import com.texus.truthcounter.components.ItemScoreBoard;
-import com.texus.truthcounter.components.ItemYourStatus;
-import com.texus.truthcounter.datamodels.TruthInfo;
-import com.texus.truthcounter.db.DBHelper;
 
 import android.content.Context;
 import android.content.Intent;
@@ -20,13 +15,19 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import texus.truthcounter.BaseActivity;
+import texus.truthcounter.adapter.TruthListAdapeter;
+import texus.truthcounter.datamodels.TruthInfo;
+import texus.truthcounter.db.DBHelper;
+
 public class MyBookActivity extends BaseActivity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.my_book_activity);
-		
+
+		setBackOnToolbar();
 		ListView  listView = ( ListView ) this.findViewById(R.id.listMyBook);
 		SetListTask task = new SetListTask(listView, this);
 		task.execute();
