@@ -1,7 +1,11 @@
 package texus.truthcounter;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -20,6 +24,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle(getResources().getText(R.string.app_name));
         setAppTitle();
 
 //        setIconOnToolbar();
@@ -40,8 +45,13 @@ public class MainActivity extends BaseActivity {
         Toolbar mActionBarToolbar = (Toolbar) findViewById(R.id.toolbar);
         if(mActionBarToolbar == null) return;
         setSupportActionBar(mActionBarToolbar);
-        getSupportActionBar().setTitle(
-                getResources().getString(R.string.app_name));
+        if(getSupportActionBar() == null) return;
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+//        mActionBarToolbar.setTitle("");
+//        setSupportActionBar(mActionBarToolbar);
+//        mActionBarToolbar.setTitle("XXX");
     }
 
 

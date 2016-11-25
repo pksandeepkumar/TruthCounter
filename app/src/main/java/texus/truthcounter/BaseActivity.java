@@ -54,6 +54,21 @@ public class BaseActivity extends AppCompatActivity {
 		return;
 	}
 
+	private void setBackNavigation() {
+		Toolbar mActionBarToolbar = (Toolbar) findViewById(R.id.toolbar);
+		if(mActionBarToolbar == null) return;
+		setSupportActionBar(mActionBarToolbar);
+		if(getSupportActionBar() == null) return;
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+//        mActionBarToolbar.setTitle("");
+//        setSupportActionBar(mActionBarToolbar);
+//        mActionBarToolbar.setTitle("XXX");
+	}
+
+
+
 	public void setIconOnToolbar() {
 		ActionBar actionBar = getSupportActionBar();
 		if( actionBar ==  null) return;

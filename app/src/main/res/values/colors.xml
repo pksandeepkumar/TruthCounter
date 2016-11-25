@@ -7,9 +7,12 @@
     <color name="headder_main">#FBAD19</color>
     <color name="headder_bottom">#C48102</color>
 
-    <color name="bg_main">#5A5A5C</color>
+    <color name="bg_main">#cacaca</color>
 
     <color name="bg_green_for_score_board">#4EBAAA</color>
     <color name="bg_red_for_score_board">#E83B3D</color>
+
+    <color name="material_text_color">#757575</color>
+    <color name="material_line_color">#e0e0e0</color>
 
 </resources>

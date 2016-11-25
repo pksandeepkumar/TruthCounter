@@ -17,25 +17,53 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:gravity="top"
+                app:title="some title"
                 android:minHeight="?attr/actionBarSize">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name"
+                        android:layout_gravity="center"
+                        android:id="@+id/toolbar_title"
+                        android:textSize="18sp"
+                        android:layout_centerVertical="true"
+                        android:textColor="#FFFFFF"/>
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/rippleAbout"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true">
 
                     <ImageView
                         android:id="@+id/imAboutUs"
-                        android:layout_alignParentRight="true"
-                        android:layout_width="@dimen/menu_button_size"
-                        android:layout_height="@dimen/menu_button_size"
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="?attr/actionBarSize"
+                        android:scaleType="center"
                         android:src="@drawable/ic_about"/>
+
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/rippleMyBook"
+                        android:layout_toLeftOf="@+id/rippleAbout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true">
 
                     <ImageView
                         android:id="@+id/imMyBook"
-                        android:layout_toLeftOf="@+id/imAboutUs"
-                        android:layout_width="@dimen/menu_button_size"
-                        android:layout_height="@dimen/menu_button_size"
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="?attr/actionBarSize"
+                        android:scaleType="center"
                         android:src="@drawable/ic_book"/>
+                    </com.balysv.materialripple.MaterialRippleLayout>
                 </RelativeLayout>
 
 
