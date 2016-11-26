@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/pie_chart_control_size"
+    android:layout_height="@dimen/pie_chart_control_size">
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="@dimen/pie_chart_control_size"
+        android:layout_height="@dimen/pie_chart_control_size" />
+    <View
+        android:id="@+id/vClick"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
+    
+
+

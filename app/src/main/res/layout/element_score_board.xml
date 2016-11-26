@@ -97,9 +97,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
 
-                <ImageView
-                    android:id="@+id/imDaily"
-                    style="@style/style_for_score_board_graph_image" />
+                <texus.truthcounter.components.ControlPieGraph
+                    android:id="@+id/pieChartDaily"
+                    style="@style/style_pie_chart_home_page"
+                    />
+
+
             </LinearLayout>
         </LinearLayout>
 
@@ -143,9 +146,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
 
-                <ImageView
-                    android:id="@+id/imWeekly"
-                    style="@style/style_for_score_board_graph_image" />
+                <texus.truthcounter.components.ControlPieGraph
+                    android:id="@+id/pieWeekly"
+                    style="@style/style_pie_chart_home_page"
+                    />
+
+
             </LinearLayout>
         </LinearLayout>
 
@@ -189,9 +195,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
 
-                <ImageView
-                    android:id="@+id/imMonthly"
-                    style="@style/style_for_score_board_graph_image" />
+                <texus.truthcounter.components.ControlPieGraph
+                    android:id="@+id/pieChartMonthly"
+                    style="@style/style_pie_chart_home_page"
+                    />
+
+
             </LinearLayout>
         </LinearLayout>
 
@@ -235,9 +244,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
 
-                <ImageView
-                    android:id="@+id/imYearly"
-                    style="@style/style_for_score_board_graph_image" />
+                <texus.truthcounter.components.ControlPieGraph
+                    android:id="@+id/pieChartYearly"
+                    style="@style/style_pie_chart_home_page"
+                    />
+
+
             </LinearLayout>
         </LinearLayout>
 
@@ -281,9 +293,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
 
-                <ImageView
-                    android:id="@+id/imTotal"
-                    style="@style/style_for_score_board_graph_image" />
+                <texus.truthcounter.components.ControlPieGraph
+                    android:id="@+id/pieChartTotal"
+                    style="@style/style_pie_chart_home_page"
+                    />
+
+
             </LinearLayout>
         </LinearLayout>
 

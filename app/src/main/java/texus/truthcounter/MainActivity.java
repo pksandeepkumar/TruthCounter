@@ -1,14 +1,8 @@
 package texus.truthcounter;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 
 import texus.truthcounter.components.ItemScoreBoard;
@@ -28,6 +22,8 @@ public class MainActivity extends BaseActivity {
         setAppTitle();
 
 //        setIconOnToolbar();
+
+        initViews();
 
 
     }
