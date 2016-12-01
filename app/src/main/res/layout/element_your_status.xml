@@ -6,7 +6,7 @@
     
     android:orientation="horizontal" >
 
-    <TextView
+    <texus.truthcounter.components.TruthCounterTextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

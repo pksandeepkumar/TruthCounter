@@ -22,14 +22,14 @@
             android:paddingRight="5dp"
             android:orientation="horizontal">
 
-            <TextView
+            <texus.truthcounter.components.TruthCounterTextView
                 style="@style/style_for_score_board_headder_left"
                 android:layout_width="1px"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Duration" />
 
-            <TextView
+            <texus.truthcounter.components.TruthCounterTextView
                 style="@style/style_for_score_board_headder_other"
                 android:layout_width="1px"
                 android:layout_height="match_parent"
@@ -37,7 +37,7 @@
                 android:background="@color/bg_red_for_score_board"
                 android:text="Bad" />
 
-            <TextView
+            <texus.truthcounter.components.TruthCounterTextView
                 style="@style/style_for_score_board_headder_other"
                 android:layout_width="1px"
                 android:layout_height="match_parent"
@@ -45,7 +45,7 @@
                 android:background="@color/bg_green_for_score_board"
                 android:text="Good" />
 
-            <TextView
+            <texus.truthcounter.components.TruthCounterTextView
                 style="@style/style_for_score_board_headder_other"
                 android:layout_width="1px"
                 android:layout_height="wrap_content"
@@ -66,14 +66,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
+            <texus.truthcounter.components.TruthCounterTextView
                 style="@style/style_for_score_board_text_left"
                 android:layout_width="1px"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Daily" />
 
-            <TextView
+            <texus.truthcounter.components.TruthCounterTextView
                 android:id="@+id/badDaily"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"
@@ -82,7 +82,7 @@
                 android:background="@color/bg_red_for_score_board"
                 android:text="" />
 
-            <TextView
+            <texus.truthcounter.components.TruthCounterTextView
                 android:id="@+id/goodDaily"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"
@@ -115,14 +115,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
+            <texus.truthcounter.components.TruthCounterTextView
                 style="@style/style_for_score_board_text_left"
                 android:layout_width="1px"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Weekly" />
 
-            <TextView
+            <texus.truthcounter.components.TruthCounterTextView
                 android:id="@+id/badWeekly"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"
@@ -131,7 +131,7 @@
                 android:background="@color/bg_red_for_score_board"
                 android:text="" />
 
-            <TextView
+            <texus.truthcounter.components.TruthCounterTextView
                 android:id="@+id/goodWeekly"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"
@@ -164,14 +164,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
+            <texus.truthcounter.components.TruthCounterTextView
                 style="@style/style_for_score_board_text_left"
                 android:layout_width="1px"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Monthly" />
 
-            <TextView
+            <texus.truthcounter.components.TruthCounterTextView
                 android:id="@+id/badMonthly"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"
@@ -180,7 +180,7 @@
                 android:background="@color/bg_red_for_score_board"
                 android:text="" />
 
-            <TextView
+            <texus.truthcounter.components.TruthCounterTextView
                 android:id="@+id/goodMonthly"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"
@@ -213,14 +213,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
+            <texus.truthcounter.components.TruthCounterTextView
                 style="@style/style_for_score_board_text_left"
                 android:layout_width="1px"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yearly" />
 
-            <TextView
+            <texus.truthcounter.components.TruthCounterTextView
                 android:id="@+id/badYearly"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"
@@ -229,7 +229,7 @@
                 android:background="@color/bg_red_for_score_board"
                 android:text="" />
 
-            <TextView
+            <texus.truthcounter.components.TruthCounterTextView
                 android:id="@+id/goodYearly"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"
@@ -262,14 +262,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
+            <texus.truthcounter.components.TruthCounterTextView
                 style="@style/style_for_score_board_text_left"
                 android:layout_width="1px"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Total" />
 
-            <TextView
+            <texus.truthcounter.components.TruthCounterTextView
                 android:id="@+id/badTotal"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"
@@ -278,7 +278,7 @@
                 android:background="@color/bg_red_for_score_board"
                 android:text="" />
 
-            <TextView
+            <texus.truthcounter.components.TruthCounterTextView
                 android:id="@+id/goodTotal"
                 style="@style/style_for_score_board_text_other"
                 android:layout_width="1px"

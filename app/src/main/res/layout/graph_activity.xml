@@ -6,7 +6,7 @@
 
 
     
-    <Button
+    <texus.truthcounter.components.TruthCounterButton
         android:id="@+id/btnDatePicker"
         android:layout_margin="5dp"
         android:paddingLeft="10dp"
@@ -19,7 +19,7 @@
         android:layout_centerHorizontal="true"
         />
     
-    <TextView 
+    <texus.truthcounter.components.TruthCounterTextView
          android:id="@+id/tvTitleForGraph"
         android:layout_margin="5dp"
         android:layout_width="wrap_content"

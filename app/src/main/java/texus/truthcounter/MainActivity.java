@@ -18,7 +18,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle(getResources().getText(R.string.app_name));
+//        setTitle(getResources().getText(R.string.app_name));
         setAppTitle();
 
 //        setIconOnToolbar();
@@ -45,9 +45,6 @@ public class MainActivity extends BaseActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-//        mActionBarToolbar.setTitle("");
-//        setSupportActionBar(mActionBarToolbar);
-//        mActionBarToolbar.setTitle("XXX");
     }
 
 

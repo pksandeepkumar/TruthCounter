@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <TextView
+        <texus.truthcounter.components.TruthCounterTextView
             android:id="@+id/textViewDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
             android:src="@drawable/ic_launcher" />
     </RelativeLayout>
 
-    <TextView
+    <texus.truthcounter.components.TruthCounterTextView
         android:id="@+id/textViewDescription"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
