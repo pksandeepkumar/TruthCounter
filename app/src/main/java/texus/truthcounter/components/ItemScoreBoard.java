@@ -122,20 +122,12 @@ public class ItemScoreBoard extends RelativeLayout                              
 //		imTotal.setOnClickListener(listener);
 		
 	}
-
-	public void
 	
 	
 	public void setGoodAndBadDaily( int good, int bad) {
 		tvBadDaily.setText("" + bad);
 		tvGoodDaily.setText("" + good);
 		pieChartDaily.setValues(good, bad);
-		pieChartDaily.vClick.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-
-			}
-		});
 	}
 	
 	public void setGoodAndBadWeekly( int good, int bad) {

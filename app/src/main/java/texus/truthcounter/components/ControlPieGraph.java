@@ -31,8 +31,6 @@ public class ControlPieGraph extends RelativeLayout                             
 
 	Context mContext ;
 	private PieChart mPieChart;
-	public View vClick;
-
 
 
 	public ControlPieGraph(Context context, AttributeSet attrs, int defStyle) {
@@ -58,7 +56,6 @@ public class ControlPieGraph extends RelativeLayout                             
 		View child =  inflater.inflate(R.layout.control_pie_graph,this);
 
 		mPieChart = (PieChart) child.findViewById(R.id.pieChart);
-		vClick = child.findViewById(R.id.vClick);
 		setValues(0,0);
 	}
 

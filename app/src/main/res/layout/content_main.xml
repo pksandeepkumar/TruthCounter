@@ -41,17 +41,17 @@
         android:layout_above="@+id/yourStatus"
         android:orientation="horizontal" >
 
-        <TextView
+        <texus.truthcounter.components.TruthCounterTextView
             style="@style/style_for_navigation_button"
             android:onClick="openDescriptionPage"
             android:text="About App" />
 
-        <TextView
+        <texus.truthcounter.components.TruthCounterTextView
             style="@style/style_for_navigation_button"
             android:onClick="openMyBookActivity"
             android:text="My Book" />
 
-        <TextView
+        <texus.truthcounter.components.TruthCounterTextView
             android:visibility="invisible"
             style="@style/style_for_navigation_button"
             android:onClick="openSettingsActivity"

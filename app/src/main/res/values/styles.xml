@@ -16,6 +16,26 @@
         <item name="android:contentDescription">"Lala"</item>
     </style>
 
+    <style name="mp_mp">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="mp_wp">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="wp_wp">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="wp_mp">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
 
     <style name="style_for_score_board_headder_left">
         <item name="android:textColor">@color/material_text_color</item>
@@ -82,5 +102,38 @@
         <item name="android:background">@drawable/blank_xml</item>
         <item name="android:clickable">true</item>
     </style>
+
+    <!-- Add truth counter-->
+    <!--<style name="button_cancel" parent="Theme.AppCompat.Light">-->
+        <!--<item name="colorControlHighlight">#d65550</item>-->
+    <!--</style>-->
+
+    <!--<style name="button_draft" parent="Theme.AppCompat.Light">-->
+        <!--<item name="colorControlHighlight">#4675c3</item>-->
+    <!--</style>-->
+
+    <!--<style name="button_save" parent="Theme.AppCompat.Light">-->
+        <!--<item name="colorControlHighlight">#3e8479</item>-->
+    <!--</style>-->
+
+    <style name="add_truth_card_view" parent="CardView">
+        <item name="android:layout_width">0px</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="cardElevation">5dp</item>
+        <item name="android:layout_margin">4dp</item>
+
+    </style>
+
+    <style name="add_truth_button" parent="mp_wp">
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:background">#0FFF</item>
+
+    </style>
+
+
+
+
 
 </resources>
