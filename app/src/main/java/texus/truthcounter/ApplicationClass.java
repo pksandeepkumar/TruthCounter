@@ -5,6 +5,8 @@ import android.graphics.Typeface;
 
 /**
  * Created by sandeep on 1/12/2016
+ *
+ * Test comment
  */
 public class ApplicationClass extends Application {
 
