@@ -3,6 +3,7 @@ package texus.truthcounter.components;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -70,7 +71,8 @@ public class ItemScoreBoard extends RelativeLayout                              
 	private void init(Context context) {
 		
 		this.context = context;
-		LayoutInflater inflater = (LayoutInflater)  getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE); 
+		LayoutInflater inflater = (LayoutInflater)  getContext()
+				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		View child =  inflater.inflate(R.layout.element_score_board,this);
 		
 		tvBadDaily = (TextView) child.findViewById(R.id.badDaily);
@@ -122,36 +124,47 @@ public class ItemScoreBoard extends RelativeLayout                              
 //		imTotal.setOnClickListener(listener);
 		
 	}
-	
+
+    public void setValues(int good, int bad) {
+        if(good == 0) {
+            tvGoodDaily.setBackgroundColor(Color.TRANSPARENT);
+            tvGoodDaily.setTextColor(context.getResources().getColor(R.color.material_text_color));
+        } else {
+            tvGoodDaily.setBackgroundResource(R.drawable.rounded_green);
+            tvGoodDaily.setTextColor(Color.WHITE);
+        }
+
+        if(bad == 0) {
+            tvBadDaily.setBackgroundColor(Color.TRANSPARENT);
+            tvBadDaily.setTextColor(context.getResources().getColor(R.color.material_text_color));
+        } else {
+            tvBadDaily.setBackgroundResource(R.drawable.rounded_red);
+            tvBadDaily.setTextColor(Color.WHITE);
+        }
+
+        tvBadDaily.setText("" + bad);
+        tvGoodDaily.setText("" + good);
+        pieChartDaily.setValues(good, bad);
+    }
 	
 	public void setGoodAndBadDaily( int good, int bad) {
-		tvBadDaily.setText("" + bad);
-		tvGoodDaily.setText("" + good);
-		pieChartDaily.setValues(good, bad);
+        setValues(good, bad);
 	}
 	
 	public void setGoodAndBadWeekly( int good, int bad) {
-		tvBadWeekly.setText("" + bad);
-		tvGoodWeekly.setText("" + good);
-		pieWeekly.setValues(good, bad);
+        setValues(good, bad);
 	}
 	
 	public void setGoodAndBadMonthly( int good, int bad) {
-		tvBadMonthly.setText("" + bad);
-		tvGoodMonthly.setText("" + good);
-		pieChartMonthly.setValues(good, bad);
+        setValues(good, bad);
 	}
 	
 	public void setGoodAndBadYearly( int good, int bad) {
-		tvBadYearly.setText("" + bad);
-		tvGoodYearly.setText("" + good);
-		pieChartYearly.setValues(good, bad);
+        setValues(good, bad);
 	}
 	
 	public void setGoodAndBadTotal( int good, int bad) {
-		tvBadTotal.setText("" + bad);
-		tvGoodTotal.setText("" + good);
-		pieChartTotal.setValues(good, bad);
+        setValues(good, bad);
 	}
 	
 	

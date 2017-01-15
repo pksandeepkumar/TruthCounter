@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main" >
+
+
+
+    <Button
+        android:id="@+id/btnGoodOrBad"
+        style="@style/style_for_good_bad_button"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_bad_xml"
+         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnGoodOrBad"
+        android:layout_margin="@dimen/main_margins"
+        android:background="#FF6464"
+        android:padding="3dp"
+        android:text="Description"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/btnIgnoreDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/main_margins"
+        android:layout_marginLeft="@dimen/main_margins"
+        android:layout_marginRight="@dimen/main_margins"
+        android:background="@drawable/bg_ignore_decription_xml"
+        android:padding="3dp"
+        android:text="Save"
+        android:onClick="addGoodOrBad"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/btnCancelCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnIgnoreDescription"
+        android:layout_marginBottom="@dimen/main_margins"
+        android:layout_marginLeft="@dimen/main_margins"
+        android:layout_marginRight="@dimen/main_margins"
+        android:background="@drawable/bg_cancel_count_xml"
+        android:padding="3dp"
+        android:text="Cancel Count?"
+        android:textColor="#000000" 
+        android:onClick="goBack"/>
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnCancelCount"
+        android:layout_below="@+id/btnGoodOrBad"
+        android:hint="Description"
+        android:gravity="top"
+        android:layout_marginBottom="@dimen/main_margins"
+        android:layout_marginLeft="@dimen/main_margins"
+        android:layout_marginRight="@dimen/main_margins"
+        android:background="@drawable/rounded_bg_for_edit_text"
+        android:padding="@dimen/padding_edit_text" />
+
+</RelativeLayout>

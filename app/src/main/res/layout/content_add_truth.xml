@@ -73,19 +73,29 @@
 
     </LinearLayout>
 
-
-    <texus.truthcounter.components.TruthCounterEditText
-        android:id="@+id/etDescription"
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/llBtnLayout"
         android:layout_below="@+id/btnGoodOrBad"
-        android:layout_marginBottom="@dimen/main_margins"
-        android:layout_marginLeft="@dimen/main_margins"
-        android:layout_marginRight="@dimen/main_margins"
-        android:background="@drawable/rounded_bg_for_edit_text"
-        android:gravity="top"
-        android:hint="Description"
-        android:padding="@dimen/padding_edit_text" />
+        card_view:cardElevation="5dp"
+        android:layout_margin="5dp"
+        card_view:cardBackgroundColor="#FFF">
+
+        <texus.truthcounter.components.TruthCounterEditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/main_margins"
+            android:layout_marginLeft="@dimen/main_margins"
+            android:layout_marginRight="@dimen/main_margins"
+            android:background="#0FFF"
+            android:gravity="top"
+            android:hint="What you have done"
+            android:padding="@dimen/padding_edit_text" />
+
+    </android.support.v7.widget.CardView>
+
+
 
 </RelativeLayout>
