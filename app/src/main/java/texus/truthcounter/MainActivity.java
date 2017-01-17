@@ -9,6 +9,10 @@ import texus.truthcounter.components.ItemScoreBoard;
 import texus.truthcounter.components.ItemYourStatus;
 import texus.truthcounter.tasks.SetValuesTasks;
 
+
+/**
+ * This is the main activity
+ */
 public class MainActivity extends BaseActivity {
 
     ItemScoreBoard itemScoreBoard;
