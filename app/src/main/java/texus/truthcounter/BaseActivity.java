@@ -63,6 +63,13 @@ public class BaseActivity extends AppCompatActivity {
 		if(getSupportActionBar() == null) return;
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+		mActionBarToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
 	}
 
 

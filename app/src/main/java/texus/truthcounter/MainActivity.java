@@ -4,10 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ImageView;
 
 import texus.truthcounter.components.ItemScoreBoard;
 import texus.truthcounter.components.ItemYourStatus;
 import texus.truthcounter.tasks.SetValuesTasks;
+
+import static texus.truthcounter.R.id.toolbar;
 
 
 /**
@@ -38,16 +41,38 @@ public class MainActivity extends BaseActivity {
         itemYourStatus = (ItemYourStatus)
                 this.findViewById(R.id.yourStatus);
 
+        ImageView imAboutUs = (ImageView) this.findViewById(R.id.imAboutUs);
+        imAboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDescriptionPage(view);
+            }
+        });
+        ImageView imMyBook = (ImageView) this.findViewById(R.id.imMyBook);
+        imMyBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMyBookActivity(view);
+            }
+        });
+
         setValues();
     }
 
     private void setAppTitle() {
-        Toolbar mActionBarToolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar mActionBarToolbar = (Toolbar) findViewById(toolbar);
         if(mActionBarToolbar == null) return;
         setSupportActionBar(mActionBarToolbar);
         if(getSupportActionBar() == null) return;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        mActionBarToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
 

@@ -43,10 +43,12 @@
 
         <texus.truthcounter.components.TruthCounterTextView
             style="@style/style_for_navigation_button"
+            android:visibility="invisible"
             android:onClick="openDescriptionPage"
             android:text="About App" />
 
         <texus.truthcounter.components.TruthCounterTextView
+            android:visibility="invisible"
             style="@style/style_for_navigation_button"
             android:onClick="openMyBookActivity"
             android:text="My Book" />

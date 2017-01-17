@@ -73,30 +73,22 @@
                 android:text="Daily" />
 
             <LinearLayout
-                android:layout_width="1px"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center">
+                style="@style/style_for_lin_layout_item_score">
                 <texus.truthcounter.components.TruthCounterTextView
                     android:id="@+id/badDaily"
                     style="@style/style_for_score_board_text_good_or_bad"
-                    android:layout_width="wrap_content"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
-                    android:paddingTop="3dp"
-                    android:paddingBottom="3dp"
-                    android:layout_height="wrap_content"
-                    android:text="" />
+                    android:layout_width = "1px"
+                     />
             </LinearLayout>
 
-
+            <LinearLayout
+                style="@style/style_for_lin_layout_item_score">
             <texus.truthcounter.components.TruthCounterTextView
                 android:id="@+id/goodDaily"
                 style="@style/style_for_score_board_text_good_or_bad"
-                android:layout_width="1px"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="" />
+                android:layout_width = "1px"
+                />
+            </LinearLayout>
 
             <LinearLayout
                 style="@style/style_for_score_board_layout_graph_image"
@@ -122,6 +114,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+
             <texus.truthcounter.components.TruthCounterTextView
                 style="@style/style_for_score_board_text_left"
                 android:layout_width="1px"
@@ -129,21 +122,22 @@
                 android:layout_weight="1"
                 android:text="Weekly" />
 
+                <LinearLayout
+                    style="@style/style_for_lin_layout_item_score">
+
             <texus.truthcounter.components.TruthCounterTextView
                 android:id="@+id/badWeekly"
                 style="@style/style_for_score_board_text_good_or_bad"
-                android:layout_width="1px"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="" />
+                android:layout_width = "1px" />
+                </LinearLayout>
 
+                    <LinearLayout
+                        style="@style/style_for_lin_layout_item_score">
             <texus.truthcounter.components.TruthCounterTextView
                 android:id="@+id/goodWeekly"
                 style="@style/style_for_score_board_text_good_or_bad"
-                android:layout_width="1px"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="" />
+                android:layout_width = "1px"/>
+                    </LinearLayout>
 
             <LinearLayout
                 style="@style/style_for_score_board_layout_graph_image"
@@ -176,21 +170,21 @@
                 android:layout_weight="1"
                 android:text="Monthly" />
 
+            <LinearLayout
+                style="@style/style_for_lin_layout_item_score">
             <texus.truthcounter.components.TruthCounterTextView
                 android:id="@+id/badMonthly"
                 style="@style/style_for_score_board_text_good_or_bad"
-                android:layout_width="1px"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="" />
+                android:layout_width = "1px" />
+            </LinearLayout>
 
+                <LinearLayout
+                    style="@style/style_for_lin_layout_item_score">
             <texus.truthcounter.components.TruthCounterTextView
                 android:id="@+id/goodMonthly"
                 style="@style/style_for_score_board_text_good_or_bad"
-                android:layout_width="1px"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="" />
+                android:layout_width = "1px" />
+                </LinearLayout>
 
             <LinearLayout
                 style="@style/style_for_score_board_layout_graph_image"
@@ -223,21 +217,21 @@
                 android:layout_weight="1"
                 android:text="Yearly" />
 
+            <LinearLayout
+                style="@style/style_for_lin_layout_item_score">
             <texus.truthcounter.components.TruthCounterTextView
                 android:id="@+id/badYearly"
                 style="@style/style_for_score_board_text_good_or_bad"
-                android:layout_width="1px"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="" />
+                android:layout_width = "1px" />
+            </LinearLayout>
 
+                <LinearLayout
+                    style="@style/style_for_lin_layout_item_score">
             <texus.truthcounter.components.TruthCounterTextView
                 android:id="@+id/goodYearly"
                 style="@style/style_for_score_board_text_good_or_bad"
-                android:layout_width="1px"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="" />
+                android:layout_width = "1px" />
+                </LinearLayout>
 
             <LinearLayout
                 style="@style/style_for_score_board_layout_graph_image"
@@ -269,22 +263,23 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Total" />
+            <LinearLayout
+                style="@style/style_for_lin_layout_item_score">
 
             <texus.truthcounter.components.TruthCounterTextView
                 android:id="@+id/badTotal"
                 style="@style/style_for_score_board_text_good_or_bad"
-                android:layout_width="1px"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="" />
+                android:layout_width = "1px" />
+        </LinearLayout>
+
+            <LinearLayout
+                style="@style/style_for_lin_layout_item_score">
 
             <texus.truthcounter.components.TruthCounterTextView
                 android:id="@+id/goodTotal"
                 style="@style/style_for_score_board_text_good_or_bad"
-                android:layout_width="1px"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="" />
+                android:layout_width = "1px" />
+    </LinearLayout>
 
             <LinearLayout
                 style="@style/style_for_score_board_layout_graph_image"

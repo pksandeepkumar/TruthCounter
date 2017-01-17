@@ -125,46 +125,47 @@ public class ItemScoreBoard extends RelativeLayout                              
 		
 	}
 
-    public void setValues(int good, int bad) {
-        if(good == 0) {
-            tvGoodDaily.setBackgroundColor(Color.TRANSPARENT);
-            tvGoodDaily.setTextColor(context.getResources().getColor(R.color.material_text_color));
-        } else {
-            tvGoodDaily.setBackgroundResource(R.drawable.rounded_green);
-            tvGoodDaily.setTextColor(Color.WHITE);
-        }
 
-        if(bad == 0) {
-            tvBadDaily.setBackgroundColor(Color.TRANSPARENT);
-            tvBadDaily.setTextColor(context.getResources().getColor(R.color.material_text_color));
-        } else {
-            tvBadDaily.setBackgroundResource(R.drawable.rounded_red);
-            tvBadDaily.setTextColor(Color.WHITE);
-        }
+	public void setValues(int good, int bad, TextView tvGood, TextView tvBad, ControlPieGraph pieGraph) {
+		if(good == 0) {
+			tvGood.setBackgroundColor(Color.TRANSPARENT);
+			tvGood.setTextColor(context.getResources().getColor(R.color.material_text_color));
+		} else {
+			tvGood.setBackgroundResource(R.drawable.rounded_green);
+			tvGood.setTextColor(Color.WHITE);
+		}
 
-        tvBadDaily.setText("" + bad);
-        tvGoodDaily.setText("" + good);
-        pieChartDaily.setValues(good, bad);
-    }
+		if(bad == 0) {
+			tvBad.setBackgroundColor(Color.TRANSPARENT);
+			tvBad.setTextColor(context.getResources().getColor(R.color.material_text_color));
+		} else {
+			tvBad.setBackgroundResource(R.drawable.rounded_red);
+			tvBad.setTextColor(Color.WHITE);
+		}
+
+		tvBad.setText("" + bad);
+		tvGood.setText("" + good);
+		pieGraph.setValues(good, bad);
+	}
 	
 	public void setGoodAndBadDaily( int good, int bad) {
-        setValues(good, bad);
+        setValues(good, bad, tvGoodDaily,tvBadDaily, pieChartDaily);
 	}
 	
 	public void setGoodAndBadWeekly( int good, int bad) {
-        setValues(good, bad);
+        setValues(good, bad,tvGoodWeekly, tvBadWeekly,pieWeekly);
 	}
 	
 	public void setGoodAndBadMonthly( int good, int bad) {
-        setValues(good, bad);
+        setValues(good, bad, tvGoodMonthly, tvBadMonthly, pieChartMonthly);
 	}
 	
 	public void setGoodAndBadYearly( int good, int bad) {
-        setValues(good, bad);
+        setValues(good, bad, tvGoodYearly, tvBadYearly, pieChartYearly);
 	}
 	
 	public void setGoodAndBadTotal( int good, int bad) {
-        setValues(good, bad);
+        setValues(good, bad, tvGoodTotal, tvBadTotal, pieChartTotal);
 	}
 	
 	

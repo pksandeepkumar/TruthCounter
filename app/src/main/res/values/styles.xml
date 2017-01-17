@@ -52,6 +52,17 @@
         <item name="android:textColor">@color/material_text_color</item>
     </style>
 
+    <style name="style_for_lin_layout_item_score">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:weightSum">10</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+
+
     <style name="style_for_score_board_text_other">
         <item name="android:textColor">@color/material_text_color</item>
         <item name="android:gravity">center_horizontal|center_vertical</item>
@@ -60,7 +71,13 @@
     <style name="style_for_score_board_text_good_or_bad">
         <item name="android:textColor">#FFF</item>
         <item name="android:gravity">center_horizontal|center_vertical</item>
+
+        <item name="android:padding">3dp</item>
+        <item name="android:layout_weight">7</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
+
+
 
     <style name="style_for_score_board_internal_layout">
         <item name="android:paddingLeft">5dp</item>
