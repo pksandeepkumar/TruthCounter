@@ -1,49 +1,61 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal" 
-    >
-    
-    <RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="@dimen/main_margins"
-    android:padding="3dp"
-    android:background="@drawable/rounded_bg_white">
+    android:layout_margin="5dp"
+    card_view:cardBackgroundColor="#FFF"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardElevation="5dp">
 
     <RelativeLayout
-        android:id="@+id/rlForListElementTop"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <texus.truthcounter.components.TruthCounterTextView
-            android:id="@+id/textViewDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
-            android:layout_marginRight="3dp"
-            android:textStyle="italic"
-            android:textColor="#767571"
-            android:text="date" />
-
-        <ImageView
-            android:id="@+id/imageViewGoodOrBad"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginBottom="3dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:src="@drawable/ic_launcher" />
-    </RelativeLayout>
-
-    <texus.truthcounter.components.TruthCounterTextView
-        android:id="@+id/textViewDescription"
-        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rlForListElementTop"
-        android:text="@+id/rlForListElementTop"
-        android:layout_marginLeft="3dp" />
-    </RelativeLayout>
+        android:orientation="horizontal">
 
-</RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/main_margins"
+            android:background="@drawable/rounded_bg_white"
+            android:padding="3dp">
+
+            <RelativeLayout
+                android:id="@+id/rlForListElementTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <texus.truthcounter.components.TruthCounterTextView
+                    android:id="@+id/textViewDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginRight="3dp"
+                    android:text="date"
+                    android:textColor="#767571"
+                    android:textStyle="italic" />
+
+                <ImageView
+                    android:id="@+id/imageViewGoodOrBad"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="3dp"
+                    android:src="@drawable/ic_launcher" />
+            </RelativeLayout>
+
+            <texus.truthcounter.components.TruthCounterTextView
+                android:id="@+id/textViewDescription"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlForListElementTop"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="3dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#212121"
+                android:text="@+id/rlForListElementTop" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -33,17 +34,35 @@ public class AddGoodOrBadActivity extends BaseActivity {
 		    	btenGoodOrBad.setBackgroundResource(R.drawable.ic_good);
 		    }
 		}
+
+		if(value == GOOD)  {
+			etDescription.setText(SavedPreferance.getDraftGood(this));
+		} else {
+			etDescription.setText(SavedPreferance.getDraftBad(this));
+		}
 		
 		
 	}
 
 
+
+	public void doDraft( View view) {
+		if(value == GOOD)  {
+			SavedPreferance.setDraftGood(this, etDescription.getText().toString());
+		} else {
+			SavedPreferance.setDraftBad(this, etDescription.getText().toString());
+		}
+		Toast.makeText(this,"Draft saved", Toast.LENGTH_LONG).show();
+		finish();
+	}
 	
 	public void addGoodOrBad( View view) {
 		if(value == GOOD)  {
 			addGoodOrBad(true);
+			SavedPreferance.setDraftGood(this, "");
 	    } else {
 	    	addGoodOrBad(false);
+			SavedPreferance.setDraftBad(this, "");
 	    }
 		
 	}

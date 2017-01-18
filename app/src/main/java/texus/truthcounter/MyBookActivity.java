@@ -1,22 +1,15 @@
 package texus.truthcounter;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-
-
 import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
-import texus.truthcounter.BaseActivity;
-import texus.truthcounter.adapter.TruthListAdapeter;
+import java.util.ArrayList;
+
+import texus.truthcounter.adapter.MyBookRecycleAdapter;
 import texus.truthcounter.datamodels.TruthInfo;
 import texus.truthcounter.db.DBHelper;
 
@@ -25,11 +18,12 @@ public class MyBookActivity extends BaseActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.my_book_activity);
+		setContentView(R.layout.activity_my_book);
 
-		setBackOnToolbar();
-		ListView  listView = ( ListView ) this.findViewById(R.id.listMyBook);
-		SetListTask task = new SetListTask(listView, this);
+		setBackNavigation();
+
+		RecyclerView recyclerView = (RecyclerView) this.findViewById(R.id.recycler_view);
+		SetListTask task = new SetListTask(recyclerView, this);
 		task.execute();
 		
 		
@@ -39,14 +33,14 @@ public class MyBookActivity extends BaseActivity {
 		
 		ArrayList<TruthInfo> truthInfos = new ArrayList<TruthInfo>();
 		Context context;
- 		ListView listView;
+		RecyclerView recyclerView;
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
 		}
 		
-		public SetListTask(ListView listView, Context context) {
-			this.listView = listView;
+		public SetListTask(RecyclerView recyclerView, Context context) {
+			this.recyclerView = recyclerView;
 			this.context = context;
 		}
 		   
@@ -60,9 +54,12 @@ public class MyBookActivity extends BaseActivity {
 		protected void onPostExecute(Void result) {
 			super.onPostExecute(result);
 			if(truthInfos.size() > 0 ) {
-				TruthListAdapeter adapter = new TruthListAdapeter(context, truthInfos);
-				if(listView != null) {
-					listView.setAdapter(adapter);
+				MyBookRecycleAdapter adapter = new MyBookRecycleAdapter(context, truthInfos);
+				if(recyclerView != null) {
+					RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+					recyclerView.setLayoutManager(mLayoutManager);
+					recyclerView.setItemAnimator(new DefaultItemAnimator());
+					recyclerView.setAdapter(adapter);
 				}
 				
 			}

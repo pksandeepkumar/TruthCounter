@@ -52,7 +52,7 @@
             <com.balysv.materialripple.MaterialRippleLayout style="@style/mp_wp">
                 <texus.truthcounter.components.TruthCounterButton
                     android:id="@+id/btnDraft"
-                    android:onClick="goBack"
+                    android:onClick="doDraft"
                     android:text="Draft"
                     style="@style/add_truth_button" />
             </com.balysv.materialripple.MaterialRippleLayout>

@@ -66,6 +66,10 @@ public class ItemYourStatus extends RelativeLayout                              
 	
 	
 	public void setValues(int percentage) {
+		if(percentage != 0 ) {
+			progressLayout.setBackgroundColor(getResources().getColor(R.color.bg_green_for_score_board));
+			rlLayout.setBackgroundColor(getResources().getColor(R.color.bg_red_for_score_board));
+		}
 		int width = SavedPreferance.getWidth(mContext);
 		if(width != 0) {
 			RelativeLayout.LayoutParams lp = (LayoutParams) progressLayout.getLayoutParams();
